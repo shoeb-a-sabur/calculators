@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Alcohol Calculator</title>
+	<link type="text/css" rel="stylesheet" href="../shared/css/application.css"/>
+	<link type="text/css" rel="stylesheet" href="blood-alcohol-calculator.css"/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../shared/js/application.js"></script>
+	<script type="text/javascript" src="blood-alcohol-calculator.js?rand=32425"></script>
+</head>
+<body>
+
+    <div class="applicationWrapper">
+
+        <form action="" id="calculate" method="post" autocomplete="off">
+            <input type="hidden" name="showResult" value="true" />
+
+            <div class="row genderSelect">
+                <div class="col-xs-12">
+                    <div class="genderOption genderFemale"><div class="genderIcon"></div></div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="genderOption genderMale"><div class="genderIcon"></div></div>
+                </div>
+                <input type="hidden" name="gender" id="gender" value="" />
+            </div>
+
+            <div class="row measurements">
+                <div class="col-xs-12">
+                    <div class="inputBlock">
+                        <label for="weight">Vekt:</label>
+                        <div class="inputFieldWrapper">
+                            <input type="text" id="weight" name="weight" size="3" maxlength="6" value="" />
+                            <span class="postfix">kg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="inputBlock">
+                        <label for="time">Timer siden drikkestart:</label>
+                        <div class="inputFieldWrapper">
+                            <input class="" type="text" id="time" name="time" size="3" maxlength="6" value="" />
+                            <span class="postfix">timer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alcoholUnits inputTable" id="alcoholUnits">
+                <p class="center"><i>Fyll ut antall serveringsenheter du har drukket av utvalgte typer alkohol under.</i></p>
+                <div class="row rowHeader">
+                    <div class="col-xs-8 col-md-12">
+                        <span></span>
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <p><strong>Antall</strong></p>
+                    </div>
+                    <div class=" col-xs-8 col-md-6">
+                        <p class="amountHeading">
+                            <strong>Innhold per glass</strong><br/>
+                            <span>(Serveringsenheter)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row hidden" id="alcoholUnitBase">
+                    <div class="col-xs-8 col-md-12">
+                        <label></label>
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <input name="" type="text" maxlength="3" size="3">
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <select name="" class="" type="text">
+                            <option value="4">4 cl</option>
+                            <option value="7.5">7.5 cl</option>
+                            <option value="12">12 cl</option>
+                            <option value="33">33 cl</option>
+                            <option value="50">50 cl</option>
+                            <option value="75">75 cl</option>
+                            <option value="100">100 cl</option>
+                        </select>
+                        <input name="" type="hidden" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-7">
+                    <a class="button brandColorBg" id="js-calculate-advanced-result">Regn ut</a>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+            teeCalculator.initCalculator();
+        </script>
+
+        <div class="resultWrapper" style="display: none;">
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                </div>
+                <div class="col-xs-18 col-md-20">
+                    <h2 class="title result">Ditt resultat</h2>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a class="icon-info brandColor" href="#main"></a>
+                </div>
+            </div>
+
+            <div class="resultBox">
+                <p class="resultTitle">Din promille er estimert til:</p>
+                <p id="result" class="resultValue"></p>
+                <p><a class="brandColor" href="https://www.klikk.no/helse/kosthold/bmi-kalkulator-3702909"> Og din BMI blir da...</a></p>
+            </div>
+
+            <div class="disclaimer">
+                <span class="icon-warning"></span>
+                <p>En promillekalkulator vil kun gi et estimert promillenivå og kan ikke brukes til vurdering av f.eks. bilkjøring.</p>
+            </div>
+        </div>
+
+    </div>
+    <div id="application-wrapper-bottom"></div>
+</body>
+</html>

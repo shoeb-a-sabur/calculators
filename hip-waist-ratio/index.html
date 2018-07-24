@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hip Waist Ratio Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../shared/css/application.css">
+    <link rel="stylesheet" type="text/css" href="hip-waist-ratio-calculator.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../shared/js/application.js"></script>
+    <script type="text/javascript" src="hip-waist-ratio-calculator.js"></script>
+</head>
+<body>
+
+	<div class="applicationWrapper">
+		<div class="row">
+			<div class="col-xs-3 col-md-2">
+			</div>
+			<div class="col-xs-18 col-md-20">
+				<h2 class="title result" style="display: none;">Ditt resultat</h2>
+			</div>
+			<div class="col-xs-3 col-md-2">
+				<a class="icon-info brandColor" href="#main"></a>
+			</div>
+		</div>
+
+
+
+		<div class="resultWrapper" style="display: none;">
+			<div class="row">
+				<div class="col-md-8 col-md-push-8">
+					<div class="resultBox">
+						<p class="resultTitle">Din liv-hofte ratio</p>
+						<p id="ratio" class="resultValue">0,7</p>
+						<p id="result-paereform" class="resultSummary rdata" style="display: none">Du har pæreform</p>
+						<p id="result-epleform" class="resultSummary rdata" style="display: none">Du har epleform</p>
+					</div>
+				</div>
+				<div class="col-md-8 col-md-pull-8">
+					<div class="resultBox grey">
+						<p class="resultTitle"><span class="genderText">Kvinner</span> under</p>
+						<p id="bound" class="resultValue">0.5</p>
+						<p class="resultSummary">= pæreform</p>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="resultBox grey">
+						<p class="resultTitle"><span class="genderText">Kvinner</span> over</p>
+						<p id="bound2" class="resultValue">0,8</p>
+						<p class="resultSummary">= epleform</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-24">
+					<div class="disclaimer">
+						<span class="icon-warning"></span>
+						<p id="epleform-explanation" class="explanation rdata" style="display: none">
+							Du har epleform, som kan skyldes både gener og livsstil. En slik kroppsform, der fettet har lagt seg rundt mageregionen, er ikke bra for helsa.
+							Bukfett bidrar blant annet til hjerte- og karsykdommer, insulinresistens og type-2 diabetes.
+							Den beste måten å bekjempe bukfettet på, er et sunt og variert kosthold, samt nok fysisk aktivitet.
+							<br/>(Kilde: Overlege Jøran Hjelmesæth)
+						</p>
+						<p id="paereform-explanation" class="explanation rdata" style="display: none">
+							Du har pæreform og eventuelle ekstra kilo er først og fremst fordelt på hofter og lår.
+							Det er en snillere fettfordeling enn om du har epleform. Likevel bør du ikke utelukke behovet for vektreduksjon.
+							Behovet for behandling, avhenger imidlertid av graden av overvekt, og om du i tillegg har andre sykdommer som berøres av vekten.
+							Hvis du veier for mye og fettfordelingen på kroppen er ugunstig, vil det generelt sett gi helsegevinst å komme ned i vekt.
+							<br/>(Kilde: Klinisk ernæringsfysiolog Ragnhild Lekven Fimreite)
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form id="hip-waist-ratio-calculator" method="get" action="" >
+
+			<div class="row genderSelect">
+				<div class="col-xs-12">
+					<div class="genderOption genderFemale"><div class="genderIcon"></div></div>
+				</div>
+				<div class="col-xs-12">
+					<div class="genderOption genderMale"><div class="genderIcon"></div></div>
+				</div>
+			</div>
+			<input type="hidden" id="gender" name="gender" value="${gender}" />
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="inputBlock">
+						<label for="waist">Omkrets livet:</label>
+						<div class="inputFieldWrapper">
+							<input type="text" value="" maxlength="3" size="3" name="waist" id="waist">
+							<span class="postfix">cm</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="inputBlock">
+						<label for="hips">Omkrets hoftene:</label>
+						<div class="inputFieldWrapper">
+							<input type="text" value="" maxlength="3" size="3" name="hips" id="hips">
+							<span class="postfix">cm</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-7">
+					<div id="error-box" class="errorBox" style="display: none">
+						<p class="errorText">Alle felter må være fylt ut</p>
+					</div>
+					<div id="hip-waist-ratio-calculator-submit" class="button brandColorBg">REGN UT</div>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				addClickEventListeners();
+			});
+		</script>
+	</div>
+	<div id="application-wrapper-bottom"></div>
+</body>
+</html>

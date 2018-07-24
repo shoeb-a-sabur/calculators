@@ -1,0 +1,32 @@
+/*!
+ * dev-0.0.0
+ *
+ * 2014-12-16
+ */
+.applicationWrapper {
+    /* general */
+    /* maternity calc */
+}
+.applicationWrapper .styled-select {
+    height: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.applicationWrapper .styled-select select {
+    width: 120% !important;
+    height: auto;
+    margin: 10px 0;
+    border: 0 !important;
+}
+.applicationWrapper .styled-select .postfix {
+    right: -1px !important;
+}
+.applicationWrapper .fix-canvas-issue {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+.applicationWrapper .inputBlock.week-row .styled-select {
+    width: 220px;
+}

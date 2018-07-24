@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Feed Intoxication Calculator</title>
+	<link type="text/css" rel="stylesheet" href="../shared/css/application.css"/>
+	<link type="text/css" rel="stylesheet" href="breastfeed-alcohol-calculator.css"/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../shared/js/application.js"></script>
+	<script type="text/javascript" src="breastfeed-alcohol-calculator.js"></script>
+</head>
+<body>
+
+    <div class="applicationWrapper">
+
+        <form action="" id="calculate" method="post" autocomplete="off">
+            <input type="hidden" name="showResult" value="true" />
+
+            <div class="row measurements">
+                <div class="col-xs-12">
+                    <div class="inputBlock">
+                        <label for="weight">Vekt:</label>
+                        <div class="inputFieldWrapper">
+                            <input type="text" id="weight" name="weight" size="3" maxlength="6" value="" />
+                            <span class="postfix">kg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="inputBlock">
+                        <label for="time">Timer siden drikkestart:</label>
+                        <div class="inputFieldWrapper">
+                            <input class="" type="text" id="time" name="time" size="3" maxlength="6" value="" />
+                            <span class="postfix">timer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alcoholUnits inputTable" id="alcoholUnits">
+                <p class="center"><i>Fyll ut antall serveringsenheter du har drukket av utvalgte typer alkohol under.</i></p>
+                <div class="row rowHeader">
+                    <div class="col-xs-8 col-md-12">
+                        <span></span>
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <p><strong>Antall</strong></p>
+                    </div>
+                    <div class=" col-xs-8 col-md-6">
+                        <p class="amountHeading">
+                            <strong>Innhold per glass</strong><br/>
+                            <span>(Serveringsenheter)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row hidden" id="alcoholUnitBase">
+                    <div class="col-xs-8 col-md-12">
+                        <label></label>
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <input name="" type="text" maxlength="3" size="3">
+                    </div>
+                    <div class="col-xs-8 col-md-6">
+                        <select name="" class="" type="text">
+                            <option value="4">4 cl</option>
+                            <option value="7.5">7.5 cl</option>
+                            <option value="12">12 cl</option>
+                            <option value="33">33 cl</option>
+                            <option value="50">50 cl</option>
+                            <option value="75">75 cl</option>
+                            <option value="100">100 cl</option>
+                        </select>
+                        <input name="" type="hidden" value="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-7">
+                    <a class="button brandColorBg" id="js-calculate-advanced-result">Regn ut</a>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+            teeCalculator.initCalculator();
+        </script>
+
+        <div class="resultWrapper">
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                </div>
+                <div class="col-xs-18 col-md-20">
+                    <h2 class="title result hide">Ditt resultat</h2>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a class="icon-info brandColor" href="#main"></a>
+                </div>
+            </div>
+
+            <div class="resultBox good hide">
+                <img src="thumbs_up.png" alt="thumbs up" />
+                <p class="resultTitle">Ditt estimerte promillenivå ligger på <span class="result" class="resultValue"></span> og vi anser det som trygt å amme....</p>
+            </div>
+
+            <div class="resultBox bad hide">
+                <img src="thumbs_down.png" alt="thumbs down" />
+                <p class="resultTitle">Ditt estimerte promillenivå ligger på <span class="result" class="resultValue"></span> og vi anbefaler å vente med å amme til promillen er under 0,2.</p>
+            </div>
+
+            <div class="disclaimer">
+                <p>Direktoratet råder deg til å avstå helt fra alkohol til og med seks uker etter termin. Etter det kan du av og til nyte litt alkohol.</p>
+                <br>
+                <p>- Etter inntak av ett glass vin bør du vente tre timer før barnet igjen ammes.
+                    Alkohol lagres ikke i melken og promillen i morsmelken synker parallelt med nivået i mors blod.
+                    Det har derfor ingen hensikt å pumpe og kaste melken, annet enn for å lindre melkespreng, skriver Helsedirektoratet.
+                </p>
+                <hr>
+                <span class="icon-chat"></span>
+                <p>I <a href="http://www.dinbaby.com">ammedebatten på Dinbaby.com</a> kan du få tips og råd fra andre nybakte mødre.</p>
+            </div>
+        </div>
+    </div>
+    <div id="application-wrapper-bottom"></div>
+</body>
+</html>

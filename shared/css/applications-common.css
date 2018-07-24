@@ -1,0 +1,205 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
+.center {
+	text-align: center;
+}
+* :focus {
+	outline:0;
+}
+
+.application {
+	color: #333333;
+	font-family: arial,verdana,sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	padding: 4px 0;
+}
+.applicationHeader {
+    padding: 16px;
+}
+.applicationHeader .subtitle {
+	font-family: open sans, arial, helvetica;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: -0.1px;
+	line-height: 120%;
+	margin: 0;
+	padding: 0;
+}
+
+.applicationBody {
+    background-color: #eef4e5;
+    padding: 25px;
+}
+
+.applicationBody .title {
+	font-family: open sans, arial, helvetica;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: -0.4px;
+	line-height: 28px;
+	margin: 20px 0;
+	padding: 0;
+	text-align: center;
+}
+
+.applicationBody .leadtext {
+	text-align: center;
+}
+
+/* Buttons */
+
+.application .button {
+	background-color: #8abc01;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	text-indent: 0;
+	display: inline-block;
+	color: #ffffff;
+
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	height: 40px;
+	line-height: 40px;
+
+	text-decoration: none;
+	text-align: center;
+	border: none;
+	padding: 0 10px;
+	min-width: 200px;
+	margin: 30px auto;
+	font-family: 'calculator', Sans-Serif;
+	cursor: pointer;
+}
+
+.application a.button {
+	text-decoration: none;
+	float: left;
+	color: #fff;
+}
+
+.application a.button:hover {
+	color: #fff;
+}
+
+.application .button .font-icon {
+	font-size: 26px;
+	line-height: 40px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.application .button.fbShare {
+	background-color: #4c66a4;
+	font-family: open sans condensed, arial, helvetica;
+	letter-spacing: 0;
+	font-size: 22px;
+	font-weight: normal;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+/* Input table */
+
+.application .inputTable .rowHeader {
+	text-align: center;
+}
+.application .inputTable .rowHeader p {
+	margin-bottom: 0;
+}
+.application .inputTable .row {
+	margin-bottom: 5px;
+}
+.application .inputTable input,
+.application .inputTable select {
+	width: 100%;
+	text-align: center;
+}
+
+
+/**********
+Input styles
+**********/
+
+.application input,
+.application select {
+	border: 1px solid #e2e2e2;
+	background-color: #fff;
+	height: 40px;
+	padding: 7px 3px;
+}
+
+.application label {
+	font-family: open sans, arial, helvetica;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0 5px 0 0;
+	line-height: 40px;
+}
+
+/* Text input with postfix */
+
+.application .inputWrapper {
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    color: #999;
+}
+.application .inputWrapper.invalid {
+    border-color: red;
+}
+.application .inputWrapper input[type=text] {
+    border: none;
+	height: 38px;
+}
+.inputWrapper .postfix {
+    padding-right: 5px;
+    display: inline-block;
+    text-align: right;
+	line-height: 38px;
+}
+
+/* Gender Select */
+
+.genderSelect {
+    margin: 30px auto;
+    width: 330px;
+}
+.genderSelect .genderOption {
+    border: 1px solid #e2e2e2;
+    height: 100px;
+    width: 150px;
+    background-color: #fff;
+}
+.genderSelect .genderOption:hover,
+.genderSelect .genderOption.selected {
+    background-color: #000;
+}
+.genderSelect .genderFemale {
+    float: left;
+}
+.genderSelect .genderMale {
+    margin-left: 160px;
+}
+.genderSelect .genderOption .genderIcon {
+    margin: 12px auto;
+    height: 70px;
+    width: 40px;
+    background-image: url('../img/icon-gender-sprite.png');    background-repeat: no-repeat;
+}
+.genderSelect .genderFemale .genderIcon {
+    background-position: -40px 0;
+}
+.genderSelect .genderFemale.selected .genderIcon {
+    background-position: 0 0;
+}
+.genderSelect .genderMale .genderIcon {
+    background-position: -40px -70px;
+}
+.genderSelect .genderMale.selected .genderIcon {
+    background-position: 0 -70px;
+}

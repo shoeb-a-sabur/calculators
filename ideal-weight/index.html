@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ideal Weight Calculator</title>
+	<link rel="stylesheet" type="text/css" href="../shared/css/application.css">
+	<link rel="stylesheet" type="text/css" href="ideal-weight-calculator.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../shared/js/application.js"></script>
+	<script type="text/javascript" src="ideal-weight-calculator.js"></script>
+</head>
+<body>
+
+    <div class="applicationWrapper">
+
+        <div class="resultWrapper">
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                </div>
+                <div class="col-xs-18 col-md-20">
+                    <h2 class="title result">Ditt resultat</h2>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a class="icon-info brandColor" href="#main"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-24">
+                    <div class="resultBox">
+                        <p class="resultTitle">Din idealvekt</p>
+                        <p id="result-kg" class="resultValue">0,7</p>
+                        <p class="resultSummary">kg</p>
+                        <p id="result-epleform" class="resultSummary" style="display: none">Du har epleform</p>
+                        <p>Kroppsvekten din bør ligge mellom <span id="lower-result">X</span>kg og <span id="upper-result">X</span>kg, avhengig av kroppsbygningen din.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-24">
+                    <div class="disclaimer">
+                        <span class="icon-warning"></span>
+                        <p class="explanation">
+                            Utregningene er basert på BMI-formelen, som ikke tar hensyn til om du er muskuløs eller har tung benbygning.
+                            BMI skiller heller ikke mellom kroppsfett og muskler, selv om muskler veier mer enn fett.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <form id="ideal-weight-calculator" method="post" action="" >
+            <div class="row">
+                <div class="col-xs-24">
+                    <div class="inputBlock">
+                        <label for="height">Høyde:</label>
+                        <div class="inputFieldWrapper">
+                            <input type="text" value="" maxlength="5" size="5" name="height" id="height" />
+                            <span class="postfix">cm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-7">
+                    <div id="error-box" class="errorBox" style="display: none">
+                        <p class="errorText">Alle felter må være fylt ut</p>
+                    </div>
+                    <div id="ideal-weight-calculator-submit" class="button brandColorBg">REGN UT</div>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                setSubmitEventListener();
+            });
+        </script>
+    </div>
+    <div id="application-wrapper-bottom"></div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+.hide {
+    display: none;
+}
+.applicationWrapper .measurements {
+	border-top: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0;
+	margin-bottom: 30px;
+}
+.applicationWrapper .alcoholUnits {
+	width: 66.66666666%;
+	margin: 0 auto;
+}
+.applicationWrapper form .alcoholUnits .row {
+	padding: 5px 0;
+}
+.applicationWrapper .alcoholUnits p,
+.applicationWrapper .alcoholUnits label,
+.applicationWrapper .alcoholUnits input,
+.applicationWrapper .alcoholUnits select {
+	font-size: 16px;
+	line-height: 20px;
+}
+.applicationWrapper .alcoholUnits input,
+.applicationWrapper .alcoholUnits select {
+	width: 100%;
+	height: 30px;
+}
+.applicationWrapper .resultBox,
+.applicationWrapper .disclaimer {
+	margin-bottom: 30px;
+}
+
+.applicationWrapper .resultBox {
+	text-align: center;
+    padding-top: 40px;
+}
+.applicationWrapper .resultBox .resultValue {
+	font-size: 38px;
+	line-height: 42px;
+	font-weight: bold;
+}
+.applicationWrapper .resultBox .resultTitle {
+    font-weight: bold;
+    font-size: 26px;
+    width: 600px;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+}
+.applicationWrapper .disclaimer .icon-chat {
+    float: left;
+    font-size: 40px;
+    padding-right: 16px;
+    color: #999;
+}
+.applicationWrapper .button .icon-back {
+    font-size: 26px;
+    float: left;
+    margin-top: 12px;
+}
+.applicationWrapper .button .icon-forward {
+    font-size: 26px;
+    float: right;
+    margin-top: 12px;
+}
+.applicationWrapper .bottomNavigation {
+    margin: 0 -35px;
+}
+
+.applicationWrapper .leadtext {
+    text-align: center;
+}
+/*
+Mobile styles
+*/
+
+.mobile .applicationWrapper .alcoholUnits {
+	width: 100%;
+}
+.mobile .applicationWrapper .alcoholUnits .row {
+	padding: 5px;
+}
+.mobile .applicationWrapper .alcoholUnits [class^="col-"], [class*=" col-"] {
+	padding: 0 5px;
+}
+.mobile .applicationWrapper .alcoholUnits .amountHeading span {
+	font-size: 14px;
+}
+.mobile .applicationWrapper .bottomNavigation .button {
+    margin-bottom: 1px;
+}
+.mobile .applicationWrapper .bottomNavigation .button {
+    width: 480px;
+    margin: 0 -10px 1px;
+    padding: 10px;
+}
+.mobile .applicationWrapper .resultBox {
+    margin-bottom: 40px;
+}
+.mobile .applicationWrapper .resultBox .resultTitle {
+    width: auto;
+}
+.mobile .applicationWrapper .bottomNavigation {
+    margin: 0 -10px;
+}

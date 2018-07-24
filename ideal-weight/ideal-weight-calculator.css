@@ -1,0 +1,27 @@
+.applicationWrapper .resultWrapper {
+	display: none;
+}
+
+.applicationWrapper .resultWrapper .resultBox {
+	text-align: center;
+	padding: 30px;
+	background: white;
+}
+.applicationWrapper .resultWrapper .resultBox .resultTitle {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+.applicationWrapper .resultWrapper .resultBox .resultValue {
+	margin: 0 0 10px 0;
+	padding: 0;
+	font-size: 38px;
+	font-weight: bold;
+}
+.applicationWrapper .resultWrapper .resultBox .resultSummary {
+	margin: 0;
+	padding: 0;
+}
+
+.applicationWrapper .resultWrapper .klikk_share {
+	margin: 30px 0;
+}

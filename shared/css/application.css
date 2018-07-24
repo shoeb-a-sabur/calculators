@@ -1,0 +1,278 @@
+/* START DEV STYLES
+
+.applicationWrapper {
+	width: 940px;
+}
+.brandColor {
+	color: #8ABC01;
+}
+.brandColorBg {
+	background-color: #8ABC01;
+	color: white;
+}
+
+END DEVSTYLES */
+
+.applicationWrapper {
+	background-color: #f0f0f0;
+	padding: 30px;
+}
+.mobile .applicationWrapper {
+	padding: 0;
+}
+.applicationWrapper .subtitle {
+	font-family: "raleway", Arial;
+	font-size: 21px;
+	margin: 0 0 30px 0;
+	padding: 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #888;
+	float: left;
+}
+.applicationWrapper .title {
+	font-family: "Droid Serif", Georgia;
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 30px 0;
+	padding: 0;
+	color: #333;
+}
+.applicationWrapper .title.result {
+	font-family: "raleway", Arial;
+	font-size: 21px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #777;
+	letter-spacing: 1.5px;
+	font-weight: normal;
+}
+.applicationWrapper .leadtext {
+	font-family: "raleway", Arial;
+	font-size: 24px;
+	line-height: 32px;
+	color: #666;
+	margin: 0 0 40px 0;
+	padding: 0;
+	text-align: center;
+}
+
+/*
+Input styles
+*/
+
+.applicationWrapper form .row {
+	padding: 30px 0;
+}
+
+.applicationWrapper .inputBlock {
+	text-align: center;
+}
+.applicationWrapper label {
+	font-family: "raleway", Arial;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	display: inline-block;
+	margin: 0 5px 0 0;
+	vertical-align: bottom;
+}
+.applicationWrapper input[type=text],
+.applicationWrapper input[type=date],
+.applicationWrapper select {
+	font-family: "Droid Serif", Georgia;
+	font-size: 18px;
+	color: #333;
+	text-align: center;
+	height: 40px;
+}
+.applicationWrapper select {
+	margin: 0;
+	padding: 0 5px;
+}
+.applicationWrapper .ui-datepicker-trigger {
+	display: inline;
+	border: none;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	vertical-align: bottom;
+	height: 38px;
+}
+.applicationWrapper .icon-calendar {
+	font-size: 26px;
+	line-height: 38px;
+}
+
+.applicationWrapper .inputBlock .inputFieldWrapper {
+	background: white;
+	border: 1px solid #D0D0D0;
+	display: inline-block;
+	height: 40px;
+	padding: 0 5px;
+	line-height: 30px;
+}
+.applicationWrapper .inputBlock .inputFieldWrapper input[type=text],
+.applicationWrapper .inputBlock .inputFieldWrapper input[type=date],
+.applicationWrapper .inputBlock .inputFieldWrapper select {
+	border: none;
+	padding: 0;
+	height: 100%;
+}
+
+.applicationWrapper .inputBlock .inputFieldWrapper .postfix {
+	font-family: "raleway", Arial;
+	font-size: 15px;
+	color: #999;
+}
+
+.applicationWrapper .inputFieldWrapper.invalid,
+.applicationWrapper input.invalid {
+	border-color: red;
+}
+
+/* Gender Select */
+
+.applicationWrapper .genderSelect .genderOption {
+	border: 1px solid #e2e2e2;
+	height: 100px;
+	width: 150px;
+	background-color: #fff;
+}
+.applicationWrapper .genderSelect .genderOption:hover,
+.applicationWrapper .genderSelect .genderOption.selected {
+	background-color: #000;
+}
+.applicationWrapper .genderSelect .genderFemale {
+	float: right;
+}
+.applicationWrapper .genderSelect .genderMale {
+	float: left;
+}
+.applicationWrapper .genderSelect .genderOption .genderIcon {
+	margin: 12px auto;
+	height: 70px;
+	width: 40px;
+	background-image: url('../img/icon-gender-sprite.png');    background-repeat: no-repeat;
+}
+.applicationWrapper .genderSelect .genderFemale .genderIcon {
+	background-position: -40px 0;
+}
+.applicationWrapper .genderSelect .genderFemale.selected .genderIcon {
+	background-position: 0 0;
+}
+.applicationWrapper .genderSelect .genderMale .genderIcon {
+	background-position: -40px -70px;
+}
+.applicationWrapper .genderSelect .genderMale.selected .genderIcon {
+	background-position: 0 -70px;
+}
+
+/*
+Buttons
+*/
+
+.applicationWrapper .button {
+	display: block;
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+	text-transform: uppercase;
+	padding: 0 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.applicationWrapper .button:hover {
+	text-decoration: none;
+}
+
+/*
+Misc
+*/
+
+.applicationWrapper .errorBox {
+	text-align: center;
+}
+.applicationWrapper .errorBox .errorText {
+	color: red;
+	font-weight: bold;
+}
+
+.applicationWrapper .row.equalColHeight {
+	display: table-row;
+}
+.applicationWrapper .row.equalColHeight > div {
+	display: table-cell;
+	float: none;
+}
+
+.applicationWrapper .icon-back {
+	font-size: 28px;
+}
+.applicationWrapper .icon-back:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+.applicationWrapper .icon-info {
+	font-size: 32px;
+}
+.applicationWrapper .icon-info:hover {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.applicationWrapper .resultBox {
+	padding: 20px;
+	background: white;
+}
+
+.applicationWrapper .disclaimer {
+	padding: 20px 20px 20px 55px;
+	position: relative;
+	background: white;
+}
+.applicationWrapper .disclaimer p {
+	margin: 0;
+}
+.applicationWrapper .disclaimer .icon-warning {
+	font-size: 22px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+
+/*
+Mobile styles
+*/
+.mobile .applicationWrapper .title.result {
+	font-family: "raleway", Arial;
+	font-size: 21px;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: #777;
+	letter-spacing: 1.5px;
+}
+.mobile .applicationWrapper .title.result {
+	margin-bottom: 10px;
+	line-height: 32px;
+}
+/*.mobile .applicationWrapper .inputBlock .inputFieldWrapper input[type=date] {*/
+	/*width: 100%;*/
+/*}*/
+.mobile .applicationWrapper .resultBox {
+	margin-top: 10px;
+}
+.mobile .applicationWrapper label {
+	font-size: 22px;
+}
+.mobile .applicationWrapper input[type=text],
+.mobile .applicationWrapper input[type=date],
+.mobile .applicationWrapper select {
+	font-size: 22px;
+}
+.mobile .applicationWrapper .inputBlock .inputFieldWrapper .postfix {
+	font-size: 20px;
+}
