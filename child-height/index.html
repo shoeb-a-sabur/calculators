@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Child Height Calculator</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../shared/js/application.js"></script>
+	<script type="text/javascript" src="child-height-calculator.js"></script>
+    <link rel="stylesheet" href="../shared/css/application.css" />
+    <link rel="stylesheet" href="child-height-calculator.css" />
+</head>
+<body>
+
+    <div class="applicationWrapper">
+
+        <div class="form-wrapper">
+            <form id="child-height-form" method="post">
+
+                <fieldset id="page_one">
+                    <div class="row genderSelect">
+                        <div class="col-xs-12">
+                            <div class="genderOption genderFemale">
+                                <div class="genderIcon"></div>
+                                <span class="icon-checkmark"></span>
+                                <p class="genderText">Jente</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="genderOption genderMale">
+                                <div class="genderIcon"></div>
+                                <span class="icon-checkmark"></span>
+                                <p class="genderText">Gutt</p>
+                            </div>
+                        </div>
+                        <input type="hidden" id="gender" name="gender" value="" />
+                    </div>
+                    <div class="row childsName">
+                        <div class="col-xs-24 col-md-10 col-md-offset-7">
+                            <input class="nameInput" type="text" id="childsName" name="childsName" placeholder="Valgfritt: Legg til navn" />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="page_two">
+                    <div class="row parentHeight">
+                        <div class="col-md-6 col-md-offset-9">
+                            <div class="parentIcon mom"></div>
+                            <label>Hvor høy er mor?</label>
+                            <div class="inputBlock">
+                                <div class="inputFieldWrapper">
+                                    <input type="text" name="momsHeight" maxlength="3" value="165" />
+                                    <span class="postfix">cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="page_three">
+                    <div class="row parentHeight">
+                        <div class="col-md-6 col-md-offset-9">
+                            <div class="parentIcon dad"></div>
+                            <label>Hvor høy er far?</label>
+                            <div class="inputBlock">
+                                <div class="inputFieldWrapper">
+                                    <input type="text" name="dadsHeight" maxlength="3" value="180" />
+                                    <span class="postfix">cm</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="row controlButtons" id="control-buttons" data-current-page="one">
+                <div class="col-xs-12">
+                    <a class="button prevButton">
+                        <span class="icon-back"></span>
+                        <span>Tilbake</span>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a class="button nextButton">
+                        <span>Gå videre</span>
+                        <span class="icon-forward"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="resultWrapper" style="display: none;">
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                </div>
+                <div class="col-xs-18 col-md-20">
+                    <h2 class="title result">Resultat</h2>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a class="icon-info brandColor" href="#main"></a>
+                </div>
+            </div>
+
+            <div class="resultPage">
+                <div class="genderIcon ${param.gender}"></div>
+                <div class="resultBox">
+                    <span class="icon-up"></span>
+                    <p class="resultText">
+                        <span id="child-intro"></span>
+                        vil trolig bli <span id="child-height"></span> cm etter fylte 18 år
+                    </p>
+
+                    <p class="nameGuideLink" style="display: none;">
+                        Psst... trenger du inspirasjon til navn?<br/>
+                        <a href="http://navn.klikk.no/">Prøv navneguiden</a>
+                    </p>
+                </div>
+                <div class="controlButtons">
+                    <a class="button toStartButton" href="">
+                        <span class="icon-rotate"></span>
+                        <span>Start på nytt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
