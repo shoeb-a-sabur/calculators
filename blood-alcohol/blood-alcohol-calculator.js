@@ -58,7 +58,6 @@ var teeCalculator = (function ($) {
 
         if( $('[name=gender]').val() == '' ) {
             hasError = true;
-
         }
 
         var hasValues = false;
@@ -135,3 +134,8 @@ var teeCalculator = (function ($) {
     }
 
 } (jQuery));
+
+jQuery(document).ready(function() {
+    // Setting a default selected gender
+    jQuery('.genderMale').click();
+});
