@@ -50,6 +50,13 @@ function addClickEventListeners () {
 	});
 }
 
+function sendMessage(calculator, height) {
+    parent.postMessage({
+        height: height,
+        calculator: calculator,
+    }, '*');
+}
+
 $(document).ready(function(){
 	addClickEventListeners();
 });

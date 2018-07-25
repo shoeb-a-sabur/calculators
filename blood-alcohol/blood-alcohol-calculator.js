@@ -100,6 +100,9 @@ var teeCalculator = (function ($) {
         var result = (vol / (weight * genderIndex)) - (0.15 * time);
         if(result < 0) result = 0;
         $("#result").text(result.toFixed(2).toString().replace('.', ','));
+
+        // Height fix
+        sendMessage('blood-alcohol', document.body.scrollHeight);
     }
 
     return {
@@ -138,4 +141,6 @@ var teeCalculator = (function ($) {
 jQuery(document).ready(function() {
     // Setting a default selected gender
     jQuery('.genderMale').click();
+    // Height fix
+    sendMessage('blood-alcohol', document.body.scrollHeight);
 });

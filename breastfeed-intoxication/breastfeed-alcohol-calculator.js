@@ -125,3 +125,8 @@ var teeCalculator = (function ($) {
         }
     }
 } (jQuery));
+
+jQuery(document).ready(function() {
+    // Height fix
+    sendMessage('breastfeed-intoxication', document.body.scrollHeight);
+});

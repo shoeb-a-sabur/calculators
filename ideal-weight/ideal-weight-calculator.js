@@ -29,4 +29,12 @@ function showResult (result, lower, upper) {
 	$("#lower-result").text(Number(lower).toFixed(1));
 	$("#upper-result").text(Number(upper).toFixed(1));
 	$('.applicationWrapper .resultWrapper').show();
+    // Height fix
+    sendMessage('ideal-weight', document.body.scrollHeight);
 }
+
+$(document).ready(function() {
+    // Height fix
+    sendMessage('ideal-weight', document.body.scrollHeight);
+});
+

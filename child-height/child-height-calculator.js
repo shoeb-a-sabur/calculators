@@ -11,7 +11,7 @@ function nextFormPage () {
 		nextPage = 'three'
 	}
 	else if ( currentPage == 'three') {
-        calculateHeight();
+        calculateChildHeight();
         nextPage = 'one';
         $('.prevButton', controlButtons).hide();
 	}
@@ -19,6 +19,8 @@ function nextFormPage () {
 	$('#page_'+currentPage).hide();
 	$('#page_'+nextPage).show();
 	controlButtons.data('current-page', nextPage);
+
+    sendMessage('child-height', document.body.scrollHeight);
 }
 
 function previousFormPage () {
@@ -42,7 +44,7 @@ function previousFormPage () {
 	controlButtons.data('current-page', previousPage);
 }
 
-function calculateHeight() {
+function calculateChildHeight() {
     var sum = ($('[name="momsHeight"]').val() * 1) + ($('[name="dadsHeight"]').val() * 1);
 
     if( $('#gender').val() == 'male' ) {
@@ -75,4 +77,7 @@ $(document).ready(function(){
 	});
 
 	$('.genderFemale').click();
+
+	// Height fix
+    sendMessage('child-height', document.body.scrollHeight);
 });

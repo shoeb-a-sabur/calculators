@@ -86,4 +86,12 @@ function showResult (ratio, gender) {
 
 	$('.title.result').show();
     $('.resultWrapper').show();
+
+    // Height fix
+    sendMessage('hip-waist-ratio', document.body.scrollHeight);
 }
+
+$(document).ready(function() {
+    // Height fix
+    sendMessage('hip-waist-ratio', document.body.scrollHeight);
+});
