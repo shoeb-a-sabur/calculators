@@ -3,7 +3,7 @@ Contains all the calculators for Klikk.no
 ## How To Add a Calculator:
 To add a calculator in any site, only "calculators.js" needs to be added via `<script></script>` tag while specifying the calculator to be loaded.
 
-Optionally you can also specify the element ID where the calculator should load. If no element ID is specified, then you must add an elmenet with ID `id="calculator-root"` as that will be used as default fallback.
+Optionally you can also specify the element ID where the calculator should load. If no element ID is specified, then you must add an element with ID `id="calculator-root"` as that will be used as default fallback.
 
 **Example:**
 ```
